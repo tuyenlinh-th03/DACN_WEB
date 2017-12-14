@@ -1,0 +1,70 @@
+
+.dropdown-menu li.dropdown-menu-header
+{
+  background:#f2f4f8;
+}
+.dropdown-menu 
+{
+  padding: 0;
+}
+.dropdown-menu li a {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  line-height: 40px;
+  height: 40px;
+  margin: 0 -15px;
+  padding: 0 15px;
+}
+.dropdown-menu li {
+  padding: 0;
+  position: relative;
+  min-width:100%;
+  border-bottom: 1px solid #e1e6ef;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
+  width:300px;
+}
+.dropdown-menu li a i {
+  margin: 0 10px 0 -5px;
+  border: none;
+  color:rgb(6, 217, 149);
+}
+
+.dropdown-menu li a img {
+  height: 40px;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  border: 1px solid #e1e6ef;
+  margin: 0px 10px 0 -5px;
+  float: left;
+}
+.dropdown-menu li a div {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000;
+}
+.dropdown-menu li a small {
+  display: block;
+  line-height: 12px;
+  font-size: 10px;
+  margin-top: -3px;
+  font-style: italic;
+}
+.dropdown-menu li a i {
+  margin: 0 10px 0 -5px;
+  border: none;
+}
+.dropdown-menu li a i {
+  border: 1px solid #fff;
+  padding: 8px 0;
+  width: 32px;
+  text-align: center;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  height: 32px;
+}
