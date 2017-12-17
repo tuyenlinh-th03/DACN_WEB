@@ -294,11 +294,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         echo "<p style='color:red;'>UserName bị trùng! Vui lòng nhập UserName khác!</p>";
                         
                     }
-                    else
-                    {
-                       $data = $obj->insert($ma, $ten ,$us, $mk, $ns, $gt, $qtc, $dc, $sdt);
-                    }
                 }
+                       $data = $obj->insert($ma, $ten ,$us, $mk, $ns, $gt, $qtc, $dc, $sdt);
+                       echo "<p style='color:green;'>Thêm nhân viên thành công!</p>";
+
                 
             }
             ?>

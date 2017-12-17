@@ -131,7 +131,7 @@ class Cart extends Db{
 						<td><?php echo $r["DonGia"];?></td>
 						<td><?php echo $r["GiaKM"];?></td>	
 						<td><?php echo $tt;?></td>							
-						<td><a href='giohang.php?ac=del&id=<?php echo $r["MaDongDT"];?>'>Xóa</a></td>
+						<td><a href='giohang.php?ac=del&id=<?php echo $r["MaDongDT"];?>'>Xóa</a>&nbsp;
 						</tr>
 						<?php
 						$ttt += $tt;
@@ -141,7 +141,7 @@ class Cart extends Db{
 		echo "<span style='font-size:20px;float:right;'>Tổng Thành Tiền : "."<span style='font-size:35px;color:red;'>".$ttt."₫</span>"."</span>";
 		/*echo "<button onclick="<?php $cart->saveDonHang(NULL,$_SESSION["loginfront"][0]["MaKH"],$_SESSION["loginfront"][0]["TenKH"],$_SESSION["loginfront"][0]["SDT"],NULL,"Chưa duyệt");  header("location:donhang.php");?>">ĐẶT HÀNG
 		</button>";*/
-		/*echo "<button onclick='self.location.href=\"donhang.php\"'>ĐẶT HÀNG</button>";*/
+		/*echo "<button qqqqqqqqqqqqqqqq>ĐẶT HÀNG</button>";*/
 		$this->setCartInfo($this->getNumItem());
 		//Update số lượng item của cart trong header.php. Có thể không sử dụng method này nếu mỗi lần thêm xong, chuyển trang về mod=cart.
 		

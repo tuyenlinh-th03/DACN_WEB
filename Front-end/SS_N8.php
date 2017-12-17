@@ -86,7 +86,7 @@ $cart = new Cart();
                                                                                                        echo "<span style='font-size:17px;'>Xin chào, ".$ten."</span>";
                                                                                                     }
                                                                                                         ?>
-                                                                                                </span><i class="fa fa-user" style='font-size:15px;'> </i></a>
+                                                                                                </span><i class="fa fa-user"></i></a>
 	        		<ul class="dropdown-menu">
 						
 						<li class="dropdown-menu-header text-center">
@@ -457,7 +457,7 @@ $cart = new Cart();
 </div>
 <div class="container">
 	<div id="fb-root"></div>
-	<div class="fb-comments" data-href="http://tuyenlinh-th03.ml/" data-width="600" data-numposts="3"></div>
+	<div class="fb-comments" data-href="http://tuyenlinh-th03.tk/" data-width="600" data-numposts="3"></div>
 </div>
 <div class="container">
    <div class="footer margin_top_20">

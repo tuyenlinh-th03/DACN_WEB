@@ -1,5 +1,6 @@
-
 <?php
+  session_start();
+  ob_start();
   include "config.php";
   include "autoload.php";
   $obj = new Khachhang();
@@ -50,8 +51,10 @@
             
         }
         else
-          $data = $obj->insert($ma, NULL ,$email, $psw, NULL, NULL, NULL);
+          $data = $obj->insert($ma, 'Visit Guess' ,$email, $psw, NULL, NULL, NULL);
+          $_SESSION["loginfront"] = $obj->queryLogin($email, $psw);
         header("location:index.php");
+         ob_end_flush();
       }
     }
   }

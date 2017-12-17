@@ -50,6 +50,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <link href="css/style_index.css" rel="stylesheet" type="text/css" />
 <link href="css/style_cart.css" rel="stylesheet" type="text/css" />
+<!--<link href="css/style_dh.css" rel="stylesheet" type="text/css" />-->
+
 
 <!--<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>-->
@@ -98,10 +100,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                                     	/*print_r($chuoi);*/
                                                                                                     	$ten = $chuoi[$kitu-1];
 
-                                                                                                        echo "<span style='font-size:17px;'>Xin chào, ".$ten."</span>";
+                                                                                                        echo "<span style='font-size:20px;'>Xin chào, ".$ten."</span>";
                                                                                                     }
                                                                                                         ?>
-                                                                                                </span><i class="fa fa-user" style='font-size:15px;'></i></a>
+                                                                                                </span><i class="fa fa-user"></i></a>
 	        		<ul class="dropdown-menu">
 						
 						<li class="dropdown-menu-header text-center">

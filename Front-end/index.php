@@ -9,7 +9,6 @@ $db= new Db();
 $obj = new Dongdt();
 $cart = new Cart();
 ?>
-
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -56,14 +55,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			    </div>
 			    <div class="shopping_cart">
 					<div class="cart">
-						<a href="giohang.php" title="View my shopping cart" rel="nofollow">
+						<a href="#" title="View my shopping cart" rel="nofollow">
 							<strong class="opencart"> </strong>
 								<span class="cart_title">Giỏ hàng(<span id="cart_sumary"><?php echo  $cart->getNumItem();
 								?></span>)</span>
 							</a>
 						</div>
 			    </div>
-				<?php
+			
+			   <?php
 					if (!isset($_SESSION["loginfront"]))
 					{
 				?>
@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                                     	/*print_r($chuoi);*/
                                                                                                     	$ten = $chuoi[$kitu-1];
 
-                                                                                                        echo "Xin chào, ".$ten."";
+                                                                                                        echo "<span style='font-size:20px;'>Xin chào, ".$ten."</span>";
                                                                                                     }
                                                                                                         ?>
                                                                                                 </span><i class="fa fa-user"></i></a>

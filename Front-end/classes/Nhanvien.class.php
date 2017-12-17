@@ -25,6 +25,7 @@ class Nhanvien extends Db
 		$sql ="select * from nhanvien where TenNV like ? ";
 		return $this->query($sql, $arr);	
 	}
+	
 
 	function chuoiTuDong()
 	{

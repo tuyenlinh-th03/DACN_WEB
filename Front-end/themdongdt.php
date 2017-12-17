@@ -321,11 +321,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 if ($dg<=$km) {
                    echo "<p style='color:red;'>Giá khuyến mãi không thể lớn hơn giá gốc! Vui lòng  kiểm tra lại!</p>";     
                 }
+                elseif($dg<0 || $km<0)
+                {
+                    echo "<p style='color:red;'>Giá không thể là số âm! Vui lòng  kiểm tra lại!</p>"; 
+                }
                 else
-                    {
-                        $data = $obj->insert($md, $ml, $mh, $mcc, $ten, $name, $dg, $km);
-                        echo "<p style='color:green;'>Thêm dòng điện thoại thành công!</p>";
-                    }
+                {
+                    $data = $obj->insert($md, $ml, $mh, $mcc, $ten, $name, $dg, $km);
+                    echo "<p style='color:green;'>Thêm dòng điện thoại thành công!</p>";
+                }
             }
             $a= $o1->getAll();
             $b= $o3->getAll();

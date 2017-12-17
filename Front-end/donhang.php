@@ -101,10 +101,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                                                                     	/*print_r($chuoi);*/
                                                                                                     	$ten = $chuoi[$kitu-1];
 
-                                                                                                        echo "<span style='font-size:17px;'>Xin chào, ".$ten."</span>";
+                                                                                                        echo "<span style='font-size:20px;'>Xin chào, ".$ten."</span>";
                                                                                                     }
                                                                                                         ?>
-                                                                                                </span><i class="fa fa-user" style='font-size:15px;'></i></a>
+                                                                                                </span><i class="fa fa-user"></i></a>
 	        		<ul class="dropdown-menu">
 						
 						<li class="dropdown-menu-header text-center">

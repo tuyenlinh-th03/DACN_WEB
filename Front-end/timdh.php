@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/rickshaw.js"></script>
 </head>
 <body>
-<div id="wrapper" style="width: 120%">
+<div id="wrapper" style="width: 130%">
      <!-- Navigation -->
         <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             &nbsp;&nbsp;<input type="text" name="ts" placeholder="Nhập mã đơn hàng" />&nbsp;&nbsp;
             <input type="submit" name="search" value="Tìm" />
             </table>
-
+            
             <?php
             if (!isset($_GET["search"]))
             {
@@ -289,6 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             }
             else
             {
+
                 $data = $obj->search($_GET["ts"]);
             }
             ?>
@@ -307,7 +308,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <td><?php echo $r["TongThanhTien"]; ?></td>
                     <td><?php echo $r["TrangThai"]; ?></td>
                     <td>
-                    <a href="xoadh.php?ma=<?php echo $r["MaDH"]; ?>">Xóa</a> &nbsp;
+                    <?php if(strcmp($r["TrangThai"],"Đã duyệt")==0) echo "X";
+                        else{?>
+                    
+                    <a href="xoadh.php?ma=<?php echo $r["MaDH"]; ?>">Xóa</a>
+                    <a href="duyetdh.php?ma=<?php echo $r["MaDH"]; ?>">Duyệt</a><?php } ?>
                     </td></tr>
                     <?php   
                 }

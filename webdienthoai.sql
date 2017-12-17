@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 13, 2017 at 03:37 AM
+-- Generation Time: Dec 15, 2017 at 03:58 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -238,9 +238,9 @@ INSERT INTO `donhang` (`MaDH`, `MaNV`, `MaKH`, `TenKH`, `SDT`, `NgayLapDH`, `Nga
 ('DH02', 'NV03', 'KH03', 'Võ Thị Bé', '01654763458', '2017-10-01 00:00:00', '2017-10-02', 61470100, 'Đã duyệt'),
 ('DH03', 'NV04', 'KH04', 'Nguyễn Như Mai', '01215873125', '2017-10-01 00:00:00', '2017-10-02', 28790000, 'Đã duyệt'),
 ('DH04', 'NV04', 'KH05', 'Lê Thị Mùi', '0986324027', '2017-10-02 00:00:00', '2017-10-03', 25790000, 'Đã duyệt'),
-('DH05', 'NV04', 'KH06', 'Nguyễn Văn Nam', '0904934587', '2017-10-02 00:00:00', '2017-10-03', 16990000, 'Chưa duyệt'),
-('DH06', 'NV05', 'KH08', 'Nguyễn Thị Ngọc Mai', '01652734528', '2017-10-03 00:00:00', '2017-10-03', 10690000, 'Chưa duyệt'),
-('DH07', 'NV06', 'KH09', 'Nguyễn Văn Chánh', '01237624089', '2017-10-03 00:00:00', '2017-10-04', 49280000, 'Chưa duyệt');
+('DH05', 'NULL', 'KH06', 'Nguyễn Văn Nam', '0904934587', '2017-10-02 00:00:00', NULL, 16990000, 'Chưa duyệt'),
+('DH06', 'NULL', 'KH08', 'Nguyễn Thị Ngọc Mai', '01652734528', '2017-10-03 00:00:00', NULL, 10690000, 'Chưa duyệt'),
+('DH07', 'NULL', 'KH09', 'Nguyễn Văn Chánh', '01237624089', '2017-10-03 00:00:00', NULL, 49280000, 'Chưa duyệt');
 
 -- --------------------------------------------------------
 
@@ -502,13 +502,6 @@ ALTER TABLE `dongdienthoai`
   ADD CONSTRAINT `dongdienthoai_ibfk_1` FOREIGN KEY (`MaNCC`) REFERENCES `nhacungcap` (`MaNCC`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dongdienthoai_ibfk_2` FOREIGN KEY (`MaLoai`) REFERENCES `loaidienthoai` (`MaLoai`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `dongdienthoai_ibfk_3` FOREIGN KEY (`MaHangSX`) REFERENCES `hangsanxuat` (`MaHangSX`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `donhang`
---
-ALTER TABLE `donhang`
-  ADD CONSTRAINT `donhang_ibfk_1` FOREIGN KEY (`MaNV`) REFERENCES `nhanvien` (`MaNV`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `donhang_ibfk_2` FOREIGN KEY (`MaKH`) REFERENCES `khachhang` (`MaKH`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

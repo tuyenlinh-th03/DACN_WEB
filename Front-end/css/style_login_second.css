@@ -1,4 +1,7 @@
-
+.dropdown a span
+{
+  font-size: 30px;
+}
 .dropdown-menu li.dropdown-menu-header
 {
   background:#f2f4f8;

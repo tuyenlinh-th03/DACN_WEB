@@ -40,6 +40,7 @@ class Dt extends Db
 									MauSac = :M
 									where IMEI = :I ";
 		$arr = array(":I"=> $ma, ":D"=> $md, ":M"=> $ms);
+		
 		return $this->query($sql, $arr);
 	}
 }

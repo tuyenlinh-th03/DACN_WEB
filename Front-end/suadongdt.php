@@ -292,9 +292,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 $hinh = $_FILES["hinh"]["name"];
                 $dg = $_POST["dg"];
                 $km = $_POST["km"];
-                $data = $ob->update($ma, $ml, $mh, $mancc, $ten, $hinh, $dg, $km);
-                header("location:timdongdt.php");
-                ob_end_flush();
+                $x = $ob->getOne($ma);
+                if ($dg<=$km) {
+                   echo "<p style='color:red;'>Giá khuyến mãi không thể lớn hơn giá gốc! Vui lòng  kiểm tra lại!</p>";     
+                }
+                elseif($hinh!="")
+                {
+                    $data = $ob->update($ma, $ml, $mh, $mancc, $ten, $hinh, $dg, $km);
+                    header("location:timdongdt.php");
+                }
+                elseif($dg<0 || $km<0)
+                {
+                    echo "<p style='color:red;'>Giá không thể là số âm! Vui lòng  kiểm tra lại!</p>"; 
+                }
+                else
+                    {
+                        $data = $ob->update($ma, $ml, $mh, $mancc, $ten, $x[0]["Hinh"], $dg, $km);
+                        header("location:timdongdt.php");
+                        ob_end_flush();
+                    }
+                
             }
             $o2 = $obj->getOne($ma);
             $a= $o1->getAll();
@@ -349,7 +366,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             } ?>
                                             </select></td></tr>
             <tr><td>Tên dòng điện thoại: </td><td><input type="text" name="ten" required value="<?php echo $v["TenDongDT"];?>" /></td></tr>
-            <tr><td>Hình: </td><td><input type="file" name="hinh" required value="<?php echo $v["Hinh"];?>" /></td></tr>
+            <tr><td>Hình: </td><td><input type="file" name="hinh" /></td></tr>
             <tr><td>Đơn giá: </td><td><input type="text" name="dg" required value="<?php echo $v["DonGia"];?>" /></td></tr>
             <tr><td>Giá khuyến mãi: </td><td><input type="text" name="km" value="<?php echo $v["GiaKM"];?>" /></td></tr>
              <?php

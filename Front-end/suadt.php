@@ -278,7 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             include "autoload.php";
             $obj = new Dt();
             $o1 = new Dongdt();
-            $o2 = new Dt();
+            
             $ma = $_GET["ma"];
             if (isset($_POST["Submit"]))
             {

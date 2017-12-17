@@ -20,7 +20,12 @@ class Dongdt extends Db
 		return $this->query($sql, $arr);	
 	}
 	
-	
+	function getLoai($ma)
+	{
+		$arr = array("$ma");
+		$sql ="select * from  dongdienthoai where MaLoai = ?";
+		return $this->query($sql, $arr);
+	}
 	function insert($md, $ml, $mh, $mcc, $ten, $hinh, $dg, $km )
 	{
 		$sql ="insert into dongdienthoai(MaDongDT, MaLoai, MaHangSX, MaNCC, TenDongDT, Hinh, DonGia, GiaKM) ";
